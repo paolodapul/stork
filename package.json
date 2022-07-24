@@ -5,9 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx"
+    "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json)\"",
+    "format": "yarn prettier --write",
+    "check-format": "yarn prettier --list-different",
+    "check-types": "tsc",
+    "validate": "yarn check-types && yarn lint && yarn check-format",
+    "build": "yarn validate && vite build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -20,6 +25,8 @@
     "@typescript-eslint/parser": "^5.30.7",
     "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.1",
     "typescript": "^4.7.4",
     "vite": "^3.0.0",
     "vite-tsconfig-paths": "^3.5.0"
