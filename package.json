@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx",
+    "lint": "eslint . --ignore-path .gitignore",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json)\"",
     "format": "pnpm prettier --write",
     "check-format": "pnpm prettier --check",

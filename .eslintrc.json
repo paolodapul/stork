@@ -6,8 +6,13 @@
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "import"],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-    "import/no-default-export": "error"
-  }
+  "overrides": [
+    {
+      "files": ["src/**/*.+(tsx|ts)"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "error",
+        "import/no-default-export": "error"
+      }
+    }
+  ]
 }
