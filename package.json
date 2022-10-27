@@ -37,7 +37,7 @@
     "vite-tsconfig-paths": "^3.5.0"
   },
   "lint-staged": {
-    "src/**/*": "pnpm validate"
+    "*": "pnpm validate"
   },
   "license": "MIT"
 }
