@@ -14,7 +14,8 @@
       "files": ["src/**/*.+(tsx|ts)"],
       "rules": {
         "@typescript-eslint/no-unused-vars": "error",
-        "import/no-default-export": "error"
+        "import/no-default-export": "error",
+        "no-console": "error"
       }
     }
   ],
