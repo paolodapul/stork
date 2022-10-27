@@ -9,7 +9,7 @@
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json)\"",
     "format": "yarn prettier --write",
-    "check-format": "yarn prettier --list-different",
+    "check-format": "yarn prettier --check",
     "check-types": "tsc",
     "validate": "yarn check-types && yarn lint && yarn check-format",
     "build": "yarn validate && vite build"
