@@ -7,11 +7,11 @@
     "preview": "vite preview",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json)\"",
-    "format": "yarn prettier --write",
-    "check-format": "yarn prettier --check",
+    "format": "pnpm prettier --write",
+    "check-format": "pnpm prettier --check",
     "check-types": "tsc",
-    "validate": "yarn check-types && yarn lint && yarn check-format",
-    "build": "yarn validate && vite build"
+    "validate": "pnpm check-types && pnpm lint && pnpm check-format",
+    "build": "pnpm validate && vite build"
   },
   "dependencies": {
     "react": "^18.2.0",
