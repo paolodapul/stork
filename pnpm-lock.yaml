@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
+  '@types/react-router-dom': ^5.3.3
   '@typescript-eslint/eslint-plugin': ^5.30.7
   '@typescript-eslint/parser': ^5.30.7
   '@vitejs/plugin-react': ^2.0.0
@@ -19,6 +20,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-error-boundary: ^3.1.4
+  react-router-dom: ^6.4.2
   tailwindcss: ^3.2.1
   typescript: ^4.7.4
   vite: ^3.0.0
@@ -28,11 +30,13 @@ specifiers:
 dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-router-dom: 6.4.2_biqbaboplfbrettd7655fr4n2y
   vite-plugin-svgr: 2.2.2_vite@3.2.0
 
 devDependencies:
   '@types/react': 18.0.23
   '@types/react-dom': 18.0.7
+  '@types/react-router-dom': 5.3.3
   '@typescript-eslint/eslint-plugin': 5.41.0_huremdigmcnkianavgfk3x6iou
   '@typescript-eslint/parser': 5.41.0_wyqvi574yv7oiwfeinomdzmc3m
   '@vitejs/plugin-react': 2.2.0_vite@3.2.0
@@ -425,6 +429,11 @@ packages:
       fastq: 1.13.0
     dev: true
 
+  /@remix-run/router/1.0.2:
+    resolution: {integrity: sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==}
+    engines: {node: '>=14'}
+    dev: false
+
   /@rollup/pluginutils/5.0.2:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
@@ -568,6 +577,10 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: false
 
+  /@types/history/4.7.11:
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -587,6 +600,21 @@ packages:
   /@types/react-dom/18.0.7:
     resolution: {integrity: sha512-HaXc+BbqAZE1RdsK3tC8SbkFy6UL2xF76lT9rQs5JkPrJg3rWA3Ou/Lhw3YJQzEDkBpmJ79nBsfnd05WrBd2QQ==}
     dependencies:
+      '@types/react': 18.0.23
+    dev: true
+
+  /@types/react-router-dom/5.3.3:
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 18.0.23
+      '@types/react-router': 5.1.19
+    dev: true
+
+  /@types/react-router/5.1.19:
+    resolution: {integrity: sha512-Fv/5kb2STAEMT3wHzdKQK2z8xKq38EDIGVrutYLmQVVLe+4orDFquU52hQrULnEHinMKv9FSA6lf9+uNT1ITtA==}
+    dependencies:
+      '@types/history': 4.7.11
       '@types/react': 18.0.23
     dev: true
 
@@ -2674,6 +2702,29 @@ packages:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-router-dom/6.4.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.0.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-router: 6.4.2_react@18.2.0
+    dev: false
+
+  /react-router/6.4.2_react@18.2.0:
+    resolution: {integrity: sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.0.2
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
