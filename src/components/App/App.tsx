@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <div>React + Vite starter</div>
+        <div className="text-2xl">React + Vite + TypeScript starter</div>
       </ErrorBoundary>
     </div>
   );
