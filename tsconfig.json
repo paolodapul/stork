@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@contexts/*": ["src/contexts/*"]
     },
     "target": "ES2015",
     "useDefineForClassFields": true,
