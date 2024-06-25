@@ -8,11 +8,11 @@
     "test": "vitest",
     "lint": "eslint . --ignore-path .gitignore",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json|yaml)\"",
-    "format": "pnpm prettier --write",
-    "check-format": "pnpm prettier --check",
+    "format": "npm run prettier --write",
+    "check-format": "npm run prettier --check",
     "check-types": "tsc",
-    "validate": "pnpm check-types && pnpm lint && pnpm check-format",
-    "build": "pnpm validate && vite build",
+    "validate": "npm run check-types && npm run lint && npm run check-format",
+    "build": "npm run validate && vite build",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -53,7 +53,7 @@
     "vitest": "^0.25.2"
   },
   "lint-staged": {
-    "*": "pnpm validate"
+    "*": "npm run validate"
   },
   "license": "MIT"
 }
